@@ -1,0 +1,7 @@
+*.csv
+.env
+venv
+env
+*.pyc
+staticfiles
+*.sqlite3
