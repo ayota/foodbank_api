@@ -10,7 +10,7 @@ class UPCSerializer(serializers.HyperlinkedModelSerializer):
 class ScanSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = Scan
-		fields = ('upc_id', 'num_items', 'created', 'food_cat_id', 'device', 'user_id')
+		fields = ('upc_id', 'upc_raw', 'num_items', 'created', 'food_cat_id', 'device', 'user_id', 'scan_status')
 
 
 class FoodCatSerializer(serializers.HyperlinkedModelSerializer):

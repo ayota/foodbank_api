@@ -44,7 +44,8 @@ class Command(BaseCommand):
 						iron_dv=float(product[25]),
 						serving_per_cont=float(product[43]),
 						serving_size_qty=float(product[56]),
-						serving_size_unit=product[57]
+						serving_size_unit=product[57],
+						data_source='CSV'
 			)
 
 			obj.save()
@@ -92,7 +93,7 @@ class Command(BaseCommand):
 					nutritional_field=nut[2],
 					rule_type=nut[3],
 					value=nut[4],
-					wellness=nut[5]		
+					wellness=int(nut[5])		
 					)
 			obj.food_cat_id_id=FoodCat.objects.values_list('pk', flat=True).get(load_cat=nut[0])
 			obj.save()

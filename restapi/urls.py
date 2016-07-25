@@ -13,5 +13,6 @@ router.register(r'api/v1/upc', views.UPCViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^', include(router.urls)),
-    url(r'^api/v1/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api/v1/', include('rest_framework.urls', namespace='rest_framework')),
+        url(r'^scan/(?P<upc>[0-9]+)/$', views.scan_view),
 ]

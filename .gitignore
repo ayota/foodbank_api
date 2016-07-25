@@ -5,3 +5,4 @@ env
 *.pyc
 staticfiles
 *.sqlite3
+*.json
